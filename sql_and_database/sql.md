@@ -5,26 +5,22 @@
 - Transaction Control Language
 
 DML - for the data:
-
-SELECT
-INSERT
-UPDATE
-dELETE
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
 
 DDL- for the database itself:
-
-CREATE
-ALTER
-DROP
-TRUNCATE
+- CREATE
+- ALTER
+- DROP
+- TRUNCATE
 
 DCL:
-
-GRANT
-REVOKE
+- GRANT
+- REVOKE
 
 TCL:
-
-COMMIT
-ROLLBACK
-SAVEPOINT
+- COMMIT
+- ROLLBACK
+- SAVEPOINT
