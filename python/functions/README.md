@@ -1,52 +1,76 @@
-# Dictionaries
-# ----------------------------------------------------------------------------------------------------------------------
-# They are structured as KEY : VALUE
-# VALUE could be string, int, list
-# Syntax {}
+# Functions 
 
-student_1 = {
-    "Name" : "Afshana",
-#   "Key"  : "Value"
-    "Stream" : "Cyber Security",
-    "Completed_Lessons" : 3,
-    "Complete_Lessons" : ["Variables", "Operators", "Data_Collections"] # List
-}
+---
 
-print(student_1)
+A function is a group of related statements that perform a specific task.
 
-# We can fetch the values with the keys
-print(student_1["Name"])
-print(student_1["Stream"])
-print(student_1["Complete_Lessons"])
+Functions help break our program into smaller chunks. As our program grows larger, functions make it more organised and manageable.
 
-# Display only 'Operators' from the list inside the dictionary
-print(student_1["Complete_Lessons"][1]) # name of the dictionary followed by the key then the index of the value you want to retrieve
+It also avoids repetition and makes the code reusable
 
-# You can print all the keys as follows
-print(student_1.keys())
+- DRY: don't repeat yourself
+- Reuse the code once written 
 
-# You can print all the values as follows
-print(student_1.values())
+### First iteration
+```python
+# Let's create a basic function to greet user
+# Syntax def name()
 
-# Sets
-# ----------------------------------------------------------------------------------------------------------------------
-# Sets are part of data collections but the difference is that they are unordered
-# Syntax {}
-# You can use sets if you are not worried about the organisation or order of how it is stored
+def greetings():
+    return "Welcome to Cyber Security!" # you need to call the function in order for you to execute the command
 
-car_parts = {"Wheels", "Doors", "Engine"}
+print(greetings())
 
-print(car_parts) # the output is that they elements are printed in a random order everytime it is run. It won't be necessarily in the order you have assigned them.
+```
+
+### Second Iteration
+```python
+def greeting_user(name):
+     return "Welcome on board " + name + "!"
+
+print(greeting_user("engineering 88"))
+```
+
+### Exercise: Take the user's name as input() and display it back to them with greeting messages of your choice
+```python
+user_name = str(input("What is your name? "))
+
+def greet_user(user_name):
+    return "Welcome " + user_name
+
+print(greet_user(user_name))
+```
+
+### Exercise: Create a function that takes 2 args as ints
+
+```python
+def add(value1, value2):
+    return value1 + value2
+
+print(add(2,3))
+
+def subtract(value1, value2):
+    return value1 - value2
+
+print(add(9,5))
+
+def multiply(value1, value2):
+    return value1 * value2
+
+print(add(2,3))
+
+def divide(value1, value2):
+    return value1 / value2
+
+print(add(8,2))
+```
+
+### Create a function that calculates the percentage
+```python
+def percentage(value1, value2):
+    return (value1/value2) * 100
+
+print(percentage(2,3))
+```
 
 
-# To add an element
-car_parts.add("Windows")
-print(car_parts)
-
-# To remove an element
-car_parts.discard(("Doors"))
-print(car_parts)
-
-# Frozen sets are like Tuples (immutable)
-frozen_set = ([1,2,3,4])
-print(frozen_set)
